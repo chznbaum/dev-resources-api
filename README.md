@@ -54,11 +54,15 @@ You can test this by making a GET request to `localhost:3000` using Postman or a
 
 ## API Reference
 
+The API can be accessed from the URL `https://floating-river-84963.herokuapp.com/` followed by the API endpoint.
+
+For example: `https://floating-river-84963.herokuapp.com/api/v1/resources/1`
+
 ### Authentication
 
 Endpoints for creating or updating categories or resources require a JSON Web Token.
 
-Authentication requests must be made to `http://localhost:3000/api/v1/auth/login`, and include an email and a password. Valid login credentials are limited to the API creator at this time.
+Authentication requests must be made to `/api/v1/auth/login`, and include an email and a password. Valid login credentials are limited to the API creator at this time.
 
 An example response may look like the following:
 
