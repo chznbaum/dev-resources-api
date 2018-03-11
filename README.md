@@ -1,6 +1,6 @@
 # Dev-Resources API
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/7160d925c70594b0c2da/maintainability)](https://codeclimate.com/github/chznbaum/dev-resources-api/maintainability)[![Test Coverage](https://api.codeclimate.com/v1/badges/7160d925c70594b0c2da/test_coverage)](https://codeclimate.com/github/chznbaum/dev-resources-api/test_coverage)[![Build Status](https://travis-ci.org/chznbaum/dev-resources-api.svg?branch=master)](https://travis-ci.org/chznbaum/dev-resources-api)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7160d925c70594b0c2da/maintainability)](https://codeclimate.com/github/chznbaum/dev-resources-api/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/7160d925c70594b0c2da/test_coverage)](https://codeclimate.com/github/chznbaum/dev-resources-api/test_coverage) [![Build Status](https://travis-ci.org/chznbaum/dev-resources-api.svg?branch=master)](https://travis-ci.org/chznbaum/dev-resources-api)
 
 This API provides access to resources I've found helpful during my study of web and software development.
 
