@@ -94,7 +94,7 @@ All valid and properly formatted requests will return a HTTP status of 200. In t
   * **Code:** 401
   * **Content:** { "error": { "user_authentication": [ "Invalid credentials." ] } }
 
-## Index Resources
+#### Index Resources
 
 * **URL**
     `/api/v1/resources/`
@@ -106,7 +106,7 @@ All valid and properly formatted requests will return a HTTP status of 200. In t
   * **Code:** 200
   * **Content:** `{ "status": "Success", "message": "Loaded all resources.", "data": [ { "id": 1, "name": ..., "url": ..., "credit": ..., "description": ..., "category_id": ..., "created_at": ..., "updated_at": ... } ] }`
 
-## Show Resource
+#### Show Resource
 
 * **URL**
     `/api/v1/resources/:id`
@@ -118,7 +118,7 @@ All valid and properly formatted requests will return a HTTP status of 200. In t
   * **Code:** 200
   * **Content:** `{ "status": "Success", "message": "Loaded resource: ....", "data": { "id": 1, "name": ..., "url": ..., "credit": ..., "description": ..., "category_id": ..., "created_at": ..., "updated_at": ... } }`
 
-## Index Categories
+#### Index Categories
 
 * **URL**
     `/api/v1/categories/`
@@ -130,7 +130,7 @@ All valid and properly formatted requests will return a HTTP status of 200. In t
   * **Code:** 200
   * **Content:** `{ "status": "Success", "message": "Loaded all categories.", "data": [ { "id": 1, "name": ..., "description": ..., "created_at": ..., "updated_at": ... } ] }`
 
-## Show Category
+#### Show Category
 
 * **URL**
     `/api/v1/categories/:id`
