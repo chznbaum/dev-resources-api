@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180307010026) do
+ActiveRecord::Schema.define(version: 20180310232212) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "resources", force: :cascade do |t|
+    t.string "name"
+    t.text "url"
+    t.text "credit"
+    t.text "description"
+    t.bigint "category_id", default: 1
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_resources_on_category_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
@@ -23,4 +41,5 @@ ActiveRecord::Schema.define(version: 20180307010026) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "resources", "categories"
 end
