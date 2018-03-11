@@ -1,15 +1,31 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  url: MyText
-  credit: MyText
-  description: MyText
-  category: one
+no_name:
+  name:
+  url: https://www.google.com?q=1
+  credit: No Name
+  description: A resource with no name
 
-two:
-  name: MyString
-  url: MyText
-  credit: MyText
-  description: MyText
-  category: two
+no_url:
+  name: No URL
+  url:
+  credit: No Url
+  description: A resource with no url
+
+no_credit:
+  name: No Credit
+  url: https://www.google.com?q=2
+  credit:
+  description: A resource with no credit
+
+no_description:
+  name: No Description
+  url: https://www.google.com?q=3
+  credit: No Description
+  description:
+
+sample:
+  name: Sample
+  url: https://www.google.com?q=4
+  credit: A Sample
+  description: A sample resource

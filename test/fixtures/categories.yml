@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  description: MyText
+uncategorized:
+  name: Uncategorized
+  description: Resources that haven't been categorized.
 
-two:
-  name: MyString
-  description: MyText
+no_name:
+  name:
+  description: A category without a name
+
+no_description:
+  name: No Description
+  description:
