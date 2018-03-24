@@ -96,7 +96,7 @@ All valid and properly formatted requests will return a HTTP status of 200. In t
   * **Content:** `{ "access_token": ..., "message": "Login successful." }`
 * **Error Response**
   * **Code:** 401
-  * **Content:** { "error": { "user_authentication": [ "Invalid credentials." ] } }
+  * **Content:** `{ "error": { "user_authentication": [ "Invalid credentials." ] } }`
 
 #### Index Resources
 
