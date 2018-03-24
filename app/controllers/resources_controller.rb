@@ -2,8 +2,6 @@ class ResourcesController < ApplicationController
   skip_before_action :authenticate_request, only: [:index, :show]
   before_action :set_resource, only: [:show, :update]
 
-  include JsonResponder
-
   def index
     @resources = Resource.all
     render json: { status: 'Success', message: 'Loaded all resources.', data: @resources }, status: :ok
@@ -15,12 +13,22 @@ class ResourcesController < ApplicationController
 
   def create
     @resource = Resource.create(resource_params)
-    json_response('Resource', @resource, 'create')
+    if @resource.save
+      response = { message: 'Resource created successfully.', data: @resource }
+      render json: response, status: :created
+    else
+      render json: @resource.errors, status: :bad
+    end
   end
 
   def update
     @resource.update(resource_params)
-    json_response('Resource', @resource, 'update')
+    if @resource.save
+      response = { message: 'Resource updated successfully.', data: @resource }
+      render json: response, status: updated
+    else
+      render json: @resource.errors, status: :bad
+    end
   end
 
   private
