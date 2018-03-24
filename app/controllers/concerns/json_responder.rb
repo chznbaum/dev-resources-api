@@ -1,4 +1,4 @@
-module ExceptionHandler
+module JsonResponder
   extend ActiveSupport::Concern
   private
   def json_response(model, instance_variable, action)
