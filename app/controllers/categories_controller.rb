@@ -2,6 +2,8 @@ class CategoriesController < ApplicationController
   skip_before_action :authenticate_request, only: [:index, :show]
   before_action :set_category, only: [:show, :update]
 
+  include JsonResponder
+
   def index
     @categories = Category.all
     render json: { status: 'Success', message: 'Loaded all categories.', data: @categories }, status: :ok
@@ -13,22 +15,12 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.create(category_params)
-    if @category.save
-      response = { message: 'Category created successfully.' }
-      render json: response, status: :created
-    else
-      render json: @category.errors, status: :bad
-    end
+    json_response('Category', @category, 'create')
   end
 
   def update
     @category.update(category_params)
-    if @category.save
-      response = { message: 'Category updated successfully.' }
-      render json: response, status: :updated
-    else
-      render json: @category.errors, status: :bad
-    end
+    json_response('Category', @category, 'update')
   end
 
   private
