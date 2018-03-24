@@ -1,12 +1,14 @@
+# Provides json responses when creating or updating categories
+# or resources
 module JsonResponder
   extend ActiveSupport::Concern
 
   private
-  
+
   def json_response(model, instance_variable, action)
     if instance_variable.save
-      response = { message: "#{model} #{action}d successfully.", 
-        data: instance_variable }
+      response = { message: "#{model} #{action}d successfully.",
+                   data: instance_variable }
       render json: response, status: "#{action}d"
     else
       render json: instance_variable.errors, status: :bad
