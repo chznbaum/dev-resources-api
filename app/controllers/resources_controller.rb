@@ -14,7 +14,7 @@ class ResourcesController < ApplicationController
   def create
     @resource = Resource.create(resource_params)
     if @resource.save
-      response = { message: 'Resource created successfully.' }
+      response = { message: 'Resource created successfully.', data: @resource }
       render json: response, status: :created
     else
       render json: @resource.errors, status: :bad
@@ -24,7 +24,7 @@ class ResourcesController < ApplicationController
   def update
     @resource.update(resource_params)
     if @resource.save
-      response = { message: 'Resource updated successfully.' }
+      response = { message: 'Resource updated successfully.', data: @resource }
       render json: response, status: updated
     else
       render json: @resource.errors, status: :bad

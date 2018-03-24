@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.create(category_params)
     if @category.save
-      response = { message: 'Category created successfully.' }
+      response = { message: 'Category created successfully.', data: @category }
       render json: response, status: :created
     else
       render json: @category.errors, status: :bad
@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
   def update
     @category.update(category_params)
     if @category.save
-      response = { message: 'Category updated successfully.' }
+      response = { message: 'Category updated successfully.', data: @category }
       render json: response, status: :updated
     else
       render json: @category.errors, status: :bad
